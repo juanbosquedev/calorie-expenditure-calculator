@@ -2,31 +2,36 @@
 
 
 function calcularCalorias() {
+    let edadAños = parseInt(document.getElementById("edad").value);
+    let pesoKg = parseInt(document.getElementById("peso").value);
+    let alturaCm = parseInt(document.getElementById("altura").value);
+    let actividad = parseFloat(document.getElementById("actividad").value);
+    let sexo = document.querySelector('input[name="genero"]:checked').value;
 
     const multiplicadorTMB = {
         peso: 10,
         altura: 6.25,
         edad: 5
-    }
+    };
 
-        //Formula hombres: valor actividad x (10 x peso en kg) + (6,25 × altura en cm) - (5 × edad en años) + 5
+    let calculoCalorias = sexo === 'M' ?
+        actividad * ((multiplicadorTMB.peso * pesoKg) + (multiplicadorTMB.altura * alturaCm) - (multiplicadorTMB.edad * edadAños) + 5) :
+        actividad * ((multiplicadorTMB.peso * pesoKg) + (multiplicadorTMB.altura * alturaCm) - (multiplicadorTMB.edad * edadAños) - 161);
 
-        //Formula mujeres: valor actividad x (10 x peso en kg) + (6,25 × altura en cm) - (5 × edad en años) - 161
+    const resultado = document.getElementById("resultado");
+    resultado.style.display = "flex"; // Mostrar el resultado
 
-    
-    // totalCalorias.value = `${Math.floor(calculoCalorias)} kcal`;
-    
     resultado.innerHTML = `
-        <div class=" card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo">
             <h5 class="card-title h2">Calorías requeridas</h5>
             <div class="mb-3 w-100">
-                <input class="form-control text-center" value="${} kcal" style="font-size: 2rem" disabled>
+                <input class="form-control text-center" value="${calculoCalorias} kcal" style="font-size: 2rem" disabled>
             </div>
         </div>
-    `
-     // Volver a limpiar variables
-
+    `;
 }
+
+
 
 function mostrarMensajeDeError(msg) {
     const calculo = document.querySelector('#calculo');
