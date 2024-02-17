@@ -47,7 +47,7 @@
       <section class="container">
         <div class="row py-4">
           <div class="card col-lg-7">
-            <form id="formulario-calculadora">
+         
               <fieldset>
                 <legend class="h2 text-center">Calculadora de Calorías</legend>
                 <div class="mb-3">
@@ -95,14 +95,20 @@
                 </section>
                 <hr>
                 <div class="d-flex justify-content-center my-3">
-                  <button type="submit" class="btn btn-danger w-75" style="font-size: 1.5rem">Calcular</button>
+                  <button type="submit" onclick="calcularCalorias()" class="btn btn-danger w-75" style="font-size: 1.5rem">Calcular</button>
                 </div>
               </fieldset>
-            </form>
           </div>
 
           <article class="card col" id="resultado">
-          </article>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo">
+                <h5 class="card-title h2">Calorías requeridas</h5>
+                <div class="mb-3 w-100">
+                    <div class="form-control text-center" id="totalCalorias" style="font-size: 2rem" ></div>
+                </div>
+            </div>
+        </article>
+        
         </div>
       </section>
     </main>
