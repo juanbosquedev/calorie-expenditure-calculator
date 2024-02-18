@@ -6,9 +6,14 @@ function calcularCalorias() {
   let alturaCm = parseInt(document.getElementById("altura").value);
   let actividad = parseFloat(document.getElementById("actividad").value);
   let sexo = document.querySelector('input[name="genero"]:checked').value;
-
   if (!edadAños || !pesoKg || !alturaCm || !actividad) {
+    let btn = document.querySelector('button[type="submit"]');
+    btn.disabled = true;
     mostrarMensajeDeError("Faltan campos por llenar");
+
+    setTimeout(() => {
+      btn.disabled = false;
+    }, 2800);
     return;
   }
 
@@ -33,13 +38,10 @@ function calcularCalorias() {
 
   let result = Math.floor(calculoCalorias);
   aparecerResultado(result);
-
- 
 }
 
 function mostrarMensajeDeError(msg) {
   resultado.style.display = "flex";
-
   const divError = document.createElement("div");
   divError.className = "d-flex justify-content-center align-items-center h-100";
   divError.innerHTML = `<span class="alert alert-danger text-center">${msg}</span>`;
@@ -49,7 +51,7 @@ function mostrarMensajeDeError(msg) {
   setTimeout(() => {
     divError.remove();
     desvanecerResultado();
-  }, 5000);
+  }, 3000);
 }
 
 // Animaciones
@@ -75,22 +77,24 @@ function aparecerResultado(result) {
       clearInterval(id);
     }
   }, 1);
+  let calculo = document.getElementById("calculo");
   setTimeout(() => {
     desvanecerResultado();
-   setTimeout(() => {
-    
-     limpiarInputs();
-   }, 1000); 
+    setTimeout(() => {
+      limpiarInputs();
+    }, 200);
+  }, 3000);
+  setTimeout(() => {
+    calculo.remove();
   }, 3000);
 }
 
-function desvanecerResultado() {
+function desvanecerResultado(calculo) {
   let distancia = 1;
-
   let id = setInterval(() => {
     distancia *= 2;
     resultado.style.top = `${distancia}vh`;
-    if (distancia > 70) {
+    if (distancia > 60) {
       clearInterval(id);
       resultado.style.display = "none";
       resultado.style.top = 0;
