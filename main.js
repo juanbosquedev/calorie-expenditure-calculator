@@ -76,17 +76,17 @@ function aparecerResultado(result) {
     if (resta > 100) {
       clearInterval(id);
     }
-  }, 1);
+  }, 30);
   let calculo = document.getElementById("calculo");
   setTimeout(() => {
     desvanecerResultado();
     setTimeout(() => {
       limpiarInputs();
     }, 200);
-  }, 3000);
+  }, 7000);
   setTimeout(() => {
     calculo.remove();
-  }, 3000);
+  }, 7000);
 }
 
 function desvanecerResultado(calculo) {
@@ -94,12 +94,12 @@ function desvanecerResultado(calculo) {
   let id = setInterval(() => {
     distancia *= 2;
     resultado.style.top = `${distancia}vh`;
-    if (distancia > 60) {
+    if (distancia > 100) {
       clearInterval(id);
       resultado.style.display = "none";
       resultado.style.top = 0;
     }
-  }, 10);
+  }, 100);
 }
 
 const limpiarInputs = () => {
