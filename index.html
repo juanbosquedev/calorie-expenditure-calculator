@@ -59,6 +59,54 @@
           <div class="card col-lg-7">
             <fieldset>
               <legend class="h2 text-center">Calculadora de Calorías</legend>
+             <div class="row">
+
+               <div class="mb-3 col-5">
+                 <label for="nombre" class="form-label h6">Nombre</label>
+                 <input
+                   type="text"
+                   id="nombre"
+                   class="form-control"
+                   placeholder="Nombre"
+                 />
+               </div>
+               <div class="mb-3 col-5">
+                 <label for="apellido" class="form-label h6">Apellido</label>
+                 <input
+                   type="text"
+                   id="apellido"
+                   class="form-control"
+                   placeholder="Digíte su peso en kilogramos"
+                 />
+               </div>
+             </div>
+             <div class="row">
+              <div class="mb-3 col-4">
+                <label for="Identificacion" class="form-label h6"
+                  >Identificación</label
+                >
+                <select id="Identifacion" class="form-select">
+                  <option></option>
+                  <option value="D.N.I." selected>D.N.I.</option>
+                  <option value="Cédula">
+                    Cédula
+                  </option>
+                  <option value="Pasaporte">
+                    Pasaporte
+                  </option>
+                </select>
+              </div>
+              <div class="mb-3 col-6">
+                <label for="número" class="form-label h6">Número de identidad</label>
+                <input
+                  type="number"
+                  id="number"
+                  class="form-control"
+                  placeholder="Digíte su número de identidad"
+                />
+              </div>
+             </div>
+             
               <div class="mb-3">
                 <label for="edad" class="form-label h6">Edad</label>
                 <input
@@ -115,8 +163,8 @@
               </div>
 
               <section class="row m-2 h-100">
-                <span class="h6 p-0">Sexo</span>
-                <div class="form-check">
+                <span class="h6 p-0 " >Sexo</span>
+                <div class="form-check col-3">
                   <input
                     class="form-check-input"
                     value="F"
@@ -130,7 +178,7 @@
                   </label>
                 </div>
 
-                <div class="form-check">
+                <div class="form-check col-3">
                   <input
                     class="form-check-input"
                     value="M"
