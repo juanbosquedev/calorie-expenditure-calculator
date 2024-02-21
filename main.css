@@ -81,10 +81,10 @@ body::-webkit-scrollbar-thumb {
     color: white; /* Cambia el color del texto activo a blanco */
 }
 .cardTitle {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: #362517;
-    font-size: 3rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
     
 }
 .bold {
