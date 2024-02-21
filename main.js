@@ -10,7 +10,6 @@ function calcularCalorias() {
     let btn = document.querySelector('button[type="submit"]');
     btn.disabled = true;
     mostrarMensajeDeError("Faltan campos por llenar");
-
     setTimeout(() => {
       btn.disabled = false;
     }, 2800);
