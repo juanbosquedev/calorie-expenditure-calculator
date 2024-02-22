@@ -97,7 +97,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .rounded-input {
-    border-radius: 20px; /* Puedes ajustar este valor según tus preferencias */
+    border-radius: 20px; 
 }
 /* footer */
 .footer {

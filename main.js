@@ -1,38 +1,55 @@
 const resultado = document.getElementById("resultado");
 
-function calcularCalorias() {
+function procesarDatosCalorias() {
+  let nombre = document.getElementById("nombre").value;
+  let apellido = document.getElementById("apellido").value;
+  let idType = document.getElementById("idType").value;
+  let idNumber = parseInt(document.getElementById("idNumber").value);
   let edadAños = parseInt(document.getElementById("edad").value);
   let pesoKg = parseInt(document.getElementById("peso").value);
   let alturaCm = parseInt(document.getElementById("altura").value);
   let actividad = parseFloat(document.getElementById("actividad").value);
   let sexo = document.querySelector('input[name="genero"]:checked').value;
-  if (!edadAños || !pesoKg || !alturaCm || !actividad) {
-    let btn = document.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    mostrarMensajeDeError("Faltan campos por llenar");
-    setTimeout(() => {
-      btn.disabled = false;
-    }, 2800);
-    return;
-  }
 
+  let inputValues = [
+    nombre,
+    apellido,
+    idType,
+    idNumber,
+    edadAños,
+    pesoKg,
+    alturaCm,
+    actividad,
+  ];
+  let validInputs = inputValues.some(
+    (inputValue) => inputValue === null || inputValue === ""
+  );
+
+  if (validInputs) {
+    mostrarMensajeDeError("Faltan campos por llenar");
+    return;
+  } else {
+    calcularCalorias(edadAños, pesoKg, alturaCm, actividad, sexo);
+  }
+}
+
+function calcularCalorias(edad, peso, altura, actividad, sexo) {
   const multiplicadorTMB = {
     peso: 10,
     altura: 6.25,
     edad: 5,
   };
-
   let calculoCalorias =
     sexo === "M"
       ? actividad *
-        (multiplicadorTMB.peso * pesoKg +
-          multiplicadorTMB.altura * alturaCm -
-          multiplicadorTMB.edad * edadAños +
+        (multiplicadorTMB.peso * peso +
+          multiplicadorTMB.altura * altura -
+          multiplicadorTMB.edad * edad +
           5)
       : actividad *
-        (multiplicadorTMB.peso * pesoKg +
-          multiplicadorTMB.altura * alturaCm -
-          multiplicadorTMB.edad * edadAños -
+        (multiplicadorTMB.peso * peso +
+          multiplicadorTMB.altura * altura -
+          multiplicadorTMB.edad * edad -
           161);
 
   let result = Math.floor(calculoCalorias);
@@ -102,7 +119,7 @@ function desvanecerResultado(calculo) {
 }
 
 const limpiarInputs = () => {
-  const campos = ["edad", "peso", "altura", "actividad"];
+  const campos = ["nombre", "apellido", "idType", "idNumber","edad", "peso", "altura", "actividad"];
   campos.forEach((campo) => {
     document.getElementById(campo).value = "";
   });

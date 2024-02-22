@@ -61,16 +61,21 @@
       </div>
     </header>
 
+
     <main  class="main-content py-2 ">
       <section class="container ">
         <div class="row py-4 bg-transparent border-0" style="border-radius: 15px;">
+
+
           <div class="card col-lg-6 px-4">
             <fieldset>
               <legend class="h2 text-center cardTitle">Calculadora de <span class="bold">Calorías</span></legend>
                <div class="row">
 
                <div class="mb-2 col">
+
                  <label for="nombre" class="form-label h6 mb-1">Nombre</label>
+
                  <input
                    type="text"
                    id="nombre"
@@ -90,13 +95,15 @@
              </div>
              <div class="row">
               <div class="mb-2 col-4">
-                <label for="Identificacion" class="form-label h6 mb-1"
+
+                <label for="idType" class="form-label h6 mb-1"
+
                   >Identificación</label
                 >
-                <select id="Identifacion" class="form-select rounded-input">
+                <select id="idType" class="form-select rounded-input">
                   <option></option>
-                  <option value="D.N.I." selected>D.N.I.</option>
-                  <option value="Cédula">
+                  <option value="D.N.I." >D.N.I.</option>
+                  <option value="Cédula" selected>
                     Cédula
                   </option>
                   <option value="Pasaporte">
@@ -105,10 +112,12 @@
                 </select>
               </div>
               <div class="mb-2 col">
-                <label for="número" class="form-label h6 mb-1">Número de identidad</label>
+
+                <label for="idNúmero" class="form-label h6 mb-1">Número de identidad</label>
+
                 <input
                   type="number"
-                  id="number"
+                  id="idNumber"
                   class="form-control rounded-input"
                   placeholder="Digíte su número de identidad"
                 />
@@ -159,10 +168,11 @@
                 </select>
               </div>
       
+
               <section class="row ms-1 m-0 h-100">
 
                 <span class="h6  p-0 mb-0">Sexo</span>
-                <div class="form-check col">
+                <div class="form-check col-4">
                   <input class="form-check-input" value="F" type="radio" name="genero" id="femenino" checked />
                   <label class="form-check-label" for="femenino">Femenino</label>
                 </div>
@@ -170,11 +180,10 @@
                 <div class="form-check col ">
                   <input class="form-check-input" value="M" type="radio" name="genero" id="masculino" />
                   <label class="form-check-label" for="masculino">Masculino</label>
-
               </section>
               <hr />
               <div class="d-flex justify-content-center my-3">
-                <button type="submit" onclick="calcularCalorias()" class="btn btn-warning w-75 ButtomCalculate" style="font-size: 1.5rem">Calcular</button>
+                <button type="submit" onclick="procesarDatosCalorias()" class="btn btn-warning w-75 ButtomCalculate" style="font-size: 1.5rem">Calcular</button>
               </div>
             </fieldset>
           </div>
