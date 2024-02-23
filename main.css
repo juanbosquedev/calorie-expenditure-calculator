@@ -1,4 +1,4 @@
-
+/* Estilos de la barra de desplazamiento */
 body::-webkit-scrollbar {
     width: 8px;
 }
@@ -13,34 +13,55 @@ body::-webkit-scrollbar-thumb {
     background-color: rgb(122, 0, 0);
 }
 
-/* header */
+/* Estilos del encabezado */
 .header a {
     font-size: 1.5em;
 }
+
 .header a.active {
     text-decoration: underline;
-    color:#EF6C28 !important;
+    color: #EF6C28 !important;
 }
 
+/* Estilos del navbar */
+.navbar {
+    background-color: #76C5A8;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-/* Tipografía para el navbar */
+.navbar-brand img {
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
 
 .navbar-nav .nav-link {
-  font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: 'Raleway', sans-serif;
 }
 
-/* Tipografía para el título de la Card */
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+    color: #EF6C28;
+}
+
+/* Estilos de la tarjeta */
+.card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .card legend {
-  font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
-/* Tipografía para el resto de la Card */
 .card-body {
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-
-/* main */
+/* Estilos del contenido principal */
 .row {
     gap: 10px;
     overflow: hidden;
@@ -49,45 +70,45 @@ body::-webkit-scrollbar-thumb {
 .main-content {
     background-image: url('https://res.cloudinary.com/dhhyc88td/image/upload/v1708521396/Dietista_zgecas.jpg');
     background-repeat: no-repeat;
-    background-color: #F5EEDC;
+    background-color: #F9F9D7;
     background-position: right;
-    background-size: contain; /* Cambiado de 'cover' a 'contain' */
+    background-size: contain;
 }
 
 .main-content .card {
-    color:#63625f;
+    color: #63625f;
     background-color: #FFFFFF;
     border-radius: 25px;
-    
 }
 
 #resultado {
     display: none;
 }
 
-/* Code Nathalia */
-
+/* Estilos del navbar */
 .containerNavbar {
     background-color: #76C5A8;
 }
+
 .navbarStyles .nav-link {
-    color: white; /* Cambia el color del texto a blanco */
-    font-size: 1.3rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: white;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
 .navbarStyles .nav-link.active {
-    color: white; /* Cambia el color del texto activo a blanco */
+    color: white;
 }
+
 .cardTitle {
     padding-top: 10px;
     padding-bottom: 10px;
     color: #362517;
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
-    
+    font-size: 1.5rem;
 }
+
 .bold {
-    font-weight: bold; /* Aplica negrita solo a la palabra "Calorías" */
+    font-weight: bold;
 }
 
 .ButtomCalculate {
@@ -96,22 +117,59 @@ body::-webkit-scrollbar-thumb {
     background-color: #EF6C28;
 }
 
-.rounded-input {
-    border-radius: 20px; 
+.input-text::placeholder {
+    color: #c3c0c0;
 }
-/* footer */
+
+.identificationSelector {
+    color: #878181;
+}
+
+.rounded-input {
+    border-radius: 20px;
+}
+
+/* Estilos del footer */
 .footer {
     background-color: #76C5A8;
+    font-family: 'Raleway', sans-serif;
     color: white;
-    margin: 0;
+    padding: 20px 20px 0 20px;
 }
 
-.footer ul {
+.footer-column {
+    flex: 1;
+}
+
+.footer-column-left {
+    text-align: left;
+}
+
+.footer-column-right {
+    text-align: right;
+}
+
+.social-media-list {
     list-style: none;
-    font-size: 1.2rem;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.footer a {
+.footer-icon-link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: rgb(223, 223, 223);
+    color: inherit;
+}
+
+.footer-icon-link img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer p {
+    text-align: justify;
 }
