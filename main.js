@@ -80,7 +80,7 @@ function mostrarMensajeDeError(msg) {
   resultado.style.display = "block";
   const divError = document.createElement("div");
   divError.className = "d-flex justify-content-center align-items-center h-100";
-  divError.innerHTML = `<span class="alert alert-danger text-center h3 vh-19">${msg}</span>`;
+  divError.innerHTML = `<span class="alert alert-danger text-center h3 vh-19" style="color:#ef6c28">${msg}</span>`;
 
   resultado.appendChild(divError);
 
@@ -92,19 +92,30 @@ function mostrarMensajeDeError(msg) {
 
 // Animaciones
 function aparecerResultado(nombre, apellido, idType, idNumber, result) {
-  resultado.style.display = "flex";
+  resultado.style.display = "block";
   resultado.innerHTML = `
-  <article class="d-flex justify-content-center align-items-center h-100">
-        <div class="card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo">
-            <p class="card-title h2 h-100 mb-3">Se recomienda al paciente ${nombre} ${apellido}, de ${idType} n° ${idNumber}; el consumo totald de</p>
-            <div class="mb-3 w-100">
-                <input class="form-control text-center" value="${result} kcal" style="font-size: 2rem" disabled>
+  <article class="d-flex justify-content-center align-items-center vh-100">
+      <div class="card-body text-center">
+          <p class="card-title fs-1 h2 mb-3">
+            Se recomienda al paciente 
+          <div class="mb-3">
+            <input class="form-control text-center fs-2"  value="${nombre} ${apellido}" disabled>
+          </div>
+          <div class="mb-3">
+             <input class="form-control text-center fs-2" value="${idType} n° ${idNumber}" disabled>
+          </div>
+         <div class="card-title fs-1 h2 mb-3">   el consumo total diario de</div>
+            <div class="mb-3">
+            <input class="form-control text-center fs-2" value="${result} kcal" disabled>
             </div>
-        </div>
+            </p>
+      </div>
   </article>
-    `;
-  resultado.style.top = "100vh";
+  `;
+
   resultado.style.display = "flex";
+
+  resultado.style.top = "100vh";
 
   let distancia = 100;
   let resta = 0.3;
@@ -114,7 +125,7 @@ function aparecerResultado(nombre, apellido, idType, idNumber, result) {
     if (resta > 100) {
       clearInterval(id);
     }
-  }, 30);
+  }, 5);
   let calculo = document.getElementById("calculo");
   setTimeout(() => {
     desvanecerResultado();
