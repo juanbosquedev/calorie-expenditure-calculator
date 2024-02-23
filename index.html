@@ -63,11 +63,11 @@
       </div>
     </header>
 
-    <main class="row py-4 mx-0">
-      <section class="container-fluid col-lg-6 d-flex justify-content-center" >
-        <div class="row py-2 " >
-          <div class="card px-4  border-0  bg-transparent "  >
-            <fieldset class="d-flex flex-column ">
+    <main class="row py-4 mx-0 ">
+      <section class="container-fluid col-lg-6 d-flex justify-content-center">
+        <div class="row px-5  bordered">
+          <div class="card px-4 border-0 bg-transparent  ">
+            <fieldset class="d-flex flex-column">
               <legend class="h2 text-center cardTitle">
                 Calculadora de <span class="bold">Calorías</span>
               </legend>
@@ -113,6 +113,8 @@
                   <input
                     type="number"
                     id="idNumber"
+                    min="1000000"
+                    max="100000000"
                     class="form-control rounded-input"
                     placeholder="Digíte su número de identidad"
                   />
@@ -136,6 +138,8 @@
                 <input
                   type="number"
                   id="peso"
+                  min="30"
+                  max="200"
                   class="form-control rounded-input"
                   placeholder="Digíte su peso en kilogramos"
                 />
@@ -146,6 +150,8 @@
                 <input
                   type="number"
                   id="altura"
+                  min="100"
+                  max="220"
                   class="form-control rounded-input"
                   placeholder="Digíte su altura en centímetros"
                 />
@@ -208,7 +214,7 @@
                 <button
                   type="submit"
                   onclick="procesarDatosCalorias()"
-                  class="btn btn-warning w-75 ButtomCalculate"
+                  class="btn  w-75 ButtomCalculate"
                   style="font-size: 1.5rem"
                 >
                   Calcular
@@ -216,22 +222,24 @@
               </div>
             </fieldset>
           </div>
-
         </div>
       </section>
       <section
-      class="container col d-flex align-items-center justify-content-center position-relative"
+        class="container col d-flex align-items-center justify-content-center position-relative"
       >
-      <article class="card col-lg-4 position-absolute bg-transparent back-drop " id="resultado"></article>
         <img
-          class="object-fit-cover  rounded"
+          class="object-fit-cover rounded"
           src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708521396/Dietista_zgecas.jpg"
           alt=""
         />
+        <article
+          class="card col-lg-7 position-absolute top-80 bg-transparent back-drop"
+          id="resultado"
+        ></article>
       </section>
     </main>
 
-    <footer class="footer row p-3  fixed-bottom">
+    <footer class="footer row p-3 fixed-bottom vh-50">
       <div class="col d-flex justify-content-right align-items-center">
         <ul>
           <li>✖️ <a href="#">Instagram</a></li>
