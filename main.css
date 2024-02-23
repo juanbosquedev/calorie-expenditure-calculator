@@ -173,3 +173,11 @@ body::-webkit-scrollbar-thumb {
 .footer p {
     text-align: justify;
 }
+
+
+/* Estilos adicionales para la versión móvil del navbar */
+@media (max-width: 991.98px) {
+    .navbar-nav.mobile-menu {
+      margin-left: auto;
+    }
+  }
