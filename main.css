@@ -58,10 +58,6 @@ main {
   backdrop-filter: blur(10px);
 }
 
-#resultado {
-  display: none;
-  height: 40vh;
-}
 
 /* Code Nathalia */
 
@@ -77,6 +73,14 @@ main {
 .navbarStyles .nav-link.active {
   color: white; /* Cambia el color del texto activo a blanco */
 }
+
+/*MAIN*/
+#resultado{
+    display: none;
+    height: 70vh;
+    position: absolute;
+}
+
 .cardTitle {
   padding-top: 10px;
   padding-bottom: 10px;
