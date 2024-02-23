@@ -1,114 +1,112 @@
-
 body::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #42320b;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #42320b;
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: rgb(122, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(122, 0, 0);
 }
 
 /* header */
 .header a {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 .header a.active {
-    text-decoration: underline;
-    color:#EF6C28 !important;
+  text-decoration: underline;
+  color: #ef6c28 !important;
 }
-
 
 /* Tipografía para el navbar */
 
 .navbar-nav .nav-link {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Tipografía para el título de la Card */
 .card legend {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Tipografía para el resto de la Card */
 .card-body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 /* main */
 .row {
-    gap: 10px;
-    overflow: hidden;
+  gap: 10px;
+  overflow: hidden;
 }
 
 main {
-    background-color: rgb(250, 250, 215);
+  background-color: rgb(250, 250, 215);
 }
 
 .main-content .card {
-    color:#63625f;
-    background-color: #201a1a;
-    border-radius: 25px;
-    
+  color: #63625f;
+  background-color: rgb(250, 250, 215);
+  border-radius: 25px;
+}
+
+.back-drop{
+    backdrop-filter: blur(10px);
 }
 
 #resultado {
-    display: none;
+  display: block;
 }
 
 /* Code Nathalia */
 
 .containerNavbar {
-    background-color: #76C5A8;
+  background-color: #76c5a8;
 }
 .navbarStyles .nav-link {
-    color: white; /* Cambia el color del texto a blanco */
-    font-size: 1.3rem; /* Ajusta el tamaño de la fuente según sea necesario */
-    font-weight: bold;
+  color: white; /* Cambia el color del texto a blanco */
+  font-size: 1.3rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  font-weight: bold;
 }
 
 .navbarStyles .nav-link.active {
-    color: white; /* Cambia el color del texto activo a blanco */
+  color: white; /* Cambia el color del texto activo a blanco */
 }
 .cardTitle {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #362517;
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
-    
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #362517;
+  font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
 }
 .bold {
-    font-weight: bold; /* Aplica negrita solo a la palabra "Calorías" */
+  font-weight: bold; /* Aplica negrita solo a la palabra "Calorías" */
 }
 
 .ButtomCalculate {
-    border-radius: 20px;
-    color: white;
-    background-color: #EF6C28;
+  border-radius: 20px;
+  color: white;
+  background-color: #ef6c28;
 }
 
 .rounded-input {
-    border-radius: 20px; 
+  border-radius: 20px;
 }
 /* footer */
 .footer {
-    background-color: #76C5A8;
-    color: white;
-    margin: 0;
+  background-color: #76c5a8;
+  color: white;
+  margin: 0;
 }
 
 .footer ul {
-    list-style: none;
-    font-size: 1.2rem;
+  list-style: none;
+  font-size: 1.2rem;
 }
 
 .footer a {
-    text-decoration: none;
-    color: rgb(223, 223, 223);
+  text-decoration: none;
+  color: rgb(223, 223, 223);
 }
-
