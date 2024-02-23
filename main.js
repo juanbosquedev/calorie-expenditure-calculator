@@ -29,11 +29,17 @@ function procesarDatosCalorias() {
     mostrarMensajeDeError("Faltan campos por llenar");
     return;
   } else {
-    calcularCalorias(edadAños, pesoKg, alturaCm, actividad, sexo);
+    calcularCalorias(edadAños, pesoKg, alturaCm, actividad, sexo, nombre,
+      apellido,
+      idType,
+      idNumber);
   }
 }
 
-function calcularCalorias(edad, peso, altura, actividad, sexo) {
+function calcularCalorias(edad, peso, altura, actividad, sexo, nombre,
+  apellido,
+  idType,
+  idNumber,) {
   const multiplicadorTMB = {
     peso: 10,
     altura: 6.25,
@@ -52,8 +58,8 @@ function calcularCalorias(edad, peso, altura, actividad, sexo) {
           multiplicadorTMB.edad * edad -
           161);
 
-  let result = Math.floor(calculoCalorias);
-  aparecerResultado(result);
+  let resultado = Math.floor(calculoCalorias);
+  aparecerResultado(nombre, apellido, idType, idNumber, resultado);
 }
 
 function mostrarMensajeDeError(msg) {
@@ -71,17 +77,17 @@ function mostrarMensajeDeError(msg) {
 }
 
 // Animaciones
-function aparecerResultado(result) {
+function aparecerResultado(nombre, apellido, idType, idNumber, result) {
   resultado.style.display = "flex";
   resultado.innerHTML = `
         <div class="card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo">
-            <h5 class="card-title h2 mb-3">Calorías requeridas</h5>
+            <h5 class="card-title h2 h-100 mb-3">Se recomienda al paciente ${nombre} ${apellido}, de ${idType} n° ${idNumber}; el consumo totald de</h5>
             <div class="mb-3 w-100">
                 <input class="form-control text-center" value="${result} kcal" style="font-size: 2rem" disabled>
             </div>
         </div>
     `;
-  resultado.style.top = "100vh";
+  resultado.style.top = "80vh";
   resultado.style.display = "block";
 
   let distancia = 100;
