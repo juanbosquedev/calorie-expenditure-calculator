@@ -72,6 +72,22 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Code Nathalia */
+
+.containerNavbar {
+  background-color: #76c5a8;
+}
+.navbarStyles .nav-link {
+  color: white; /* Cambia el color del texto a blanco */
+  font-size: 1.3rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  font-weight: bold;
+}
+
+.navbarStyles .nav-link.active {
+  color: white; /* Cambia el color del texto activo a blanco */
+}
+/* main */
+
 .row {
   gap: 10px;
   overflow: hidden;
@@ -91,42 +107,15 @@ main {
 }
 
 .back-drop {
-  backdrop-filter: blur(10px);
-}
-
-.containerNavbar {
-  background-color: #76c5a8;
-}
-
-.navbarStyles .nav-link {
-    color: white;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.navbarStyles .nav-link.active {
-    color: white;
-}
-
-.cardTitle {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #362517;
-    font-size: 1.5rem;
-
-  color: white; /* Cambia el color del texto a blanco */
-  font-size: 1.3rem; /* Ajusta el tamaño de la fuente según sea necesario */
-  font-weight: bold;
+  backdrop-filter: blur(5px);
 }
 
 
+#resultado {
+  display: none;
+  height: 70vh;
+  position: absolute;
 
-/*MAIN*/
-#resultado{
-    display: none;
-    height: 70vh;
-    position: absolute;
-}
 
 .cardTitle {
   padding-top: 10px;
@@ -212,21 +201,35 @@ main {
     color: inherit;
 }
 
-.footer-icon-link img {
-    width: 25px;
-    height: auto;
-    margin-right: 10px;
-}
 
-.footer p {
-    text-align: justify;
-}
-
-
-/* Estilos adicionales para la versión móvil del navbar */
-@media (max-width: 991.98px) {
-    .navbar-nav.mobile-menu {
-      margin-left: auto;
-    }
+@media (max-width: 770px) {
+  header {
+    max-height: 13%;
   }
+  footer {
+    max-height: 13%;
+  }
+  p .truncate-text {
+    display: none;
+  }
+
+}
+@media (max-width: 580px) {
+  p .truncate-text {
+    display: none;
+  }
+}
+
+@media (max-width: 1645px) {
+  main{
+    overflow-y: scroll;
+  }
+  .truncate-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+}
 

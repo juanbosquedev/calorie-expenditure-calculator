@@ -33,11 +33,12 @@
   <body>
     <header class="header">
       <div class="containerNavbar">
-        <!-- Navbar para versiones de escritorio -->
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #76C5A8;">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #76C5A8; height: 10vh;" >
           <div class="container">
-            <a class="navbar-brand" href="#">
-              <img src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708652763/healt_1_ulwjcj.png" alt="Logo">
+            <a class="navbar-brand " href="#">
+              <img src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708652763/healt_1_ulwjcj.png" style="height: 40px; width: 45px;" alt="Logo">
+
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -57,16 +58,49 @@
                   <a class="nav-link" href="#">Contacto</a>
                 </li>
               </ul>
+
             </div>
           </div>
         </nav>
       </div>
     </header>
+    <!-- <header class="header">
+      <div class="py-4 containerNavbar">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav navbarStyles">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nutrición</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Planes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>
+                </ul>
+              </div>
 
-    <main class="row py-4 mx-0 ">
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header> -->
+
+    <main class="row py-4 mx-0">
       <section class="container-fluid col-lg-6 d-flex justify-content-center">
-        <div class="row px-5  bordered">
-          <div class="card px-4 border-0 bg-transparent  ">
+        <div class="row px-5 bordered">
+          <div class="card px-4 border-0 bg-transparent">
             <fieldset class="d-flex flex-column">
               <legend class="h2 text-center cardTitle">
                 Calculadora de <span class="bold">Calorías</span>
@@ -215,7 +249,7 @@
                 <button
                   type="submit"
                   onclick="procesarDatosCalorias()"
-                  class="btn  w-75 ButtomCalculate"
+                  class="btn w-75 ButtomCalculate"
                   style="font-size: 1.5rem"
                 >
                   Calcular
@@ -240,41 +274,58 @@
       </section>
     </main>
 
+    <footer class="footer row pt-sm-4  p-lg-2 p-md-2  fixed-bottom " >
+      <div class="col  d-flex justify-content-center  align-items-center">
+        <ul class="mt-sm-2">
+          <li >
+            <img
+              src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708633194/instagram_je3rnl.png"
+              alt="Instagram"
+              style="height: 22px"
+            />
+            <a href="#">Instagram</a>
+          </li>
+          <li>
+            <img
+              src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708633699/facebook_k0e32s.png"
+              alt="Facebook"
+              style="height: 22px"
+            />
+            <a href="#">Facebook</a>
+          </li>
+          <li>
+            <img
+              src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708633926/gorjeo_1_franku.png"
+              alt="Twitter"
+              style="height: 22px"
+            />
+            <a href="#">Twitter</a>
+          </li>
+        </ul>
+      </div>
 
-    <footer class="footer row p-1">
-      <div class="footer-column footer-column-left">
-        <ul class="social-media-list">
-          <li>
-            <a href="#" class="footer-icon-link">
-              <img src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708633194/instagram_je3rnl.png" alt="Instagram">
-              <span>Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer-icon-link">
-              <img src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708633699/facebook_k0e32s.png" alt="Facebook">
-              <span>Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer-icon-link">
-              <img src="https://res.cloudinary.com/dhhyc88td/image/upload/v1708633926/gorjeo_1_franku.png" alt="Twitter">
-              <span>Twitter</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-column footer-column-right">
+      <div class="col  d-flex justify-content-center  align-items-center mt-sm-2">
         <ul>
-          <li>
-            <p class="m-0">
-              <span>
-                Esta calculadora de calorías proporciona una estimación general y tiene como objetivo ofrecer orientación básica. Se recomienda buscar la asesoría personalizada de un profesional de la salud en nutrición para obtener recomendaciones específicas y adecuadas a tus necesidades individuales
-              </span>
-            </p>
-          </li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Guías</a></li>
+          <li><a href="#">Asesorías</a></li>
         </ul>
       </div>
+
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+      >
+        <p class="m-0 p-3 d-lg-flex d-sm-none d-md-none">
+          <span >
+            Esta calculadora de calorías proporciona una estimación general y
+            tiene como objetivo ofrecer orientación básica. Se recomienda buscar
+            la asesoría personalizada con uno de nuestros profesional de la
+            salud, en nutrición, para obtener recomendaciones específicas y
+            adecuadas a tus necesidades individuales.
+          </span>
+        </p>
+      </div>
+
     </footer>
 
     <script
