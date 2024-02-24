@@ -129,13 +129,21 @@ main {
   header {
     max-height: 13%;
   }
+  main{
+    max-width: 100vw;
+  }
   footer {
     max-height: 13%;
   }
   p .truncate-text {
     display: none;
   }
+  #resultado{
+    height: 65vh;
+    padding: 0 1rem;
+  }
 }
+
 @media (max-width: 580px) {
   p .truncate-text {
     display: none;
