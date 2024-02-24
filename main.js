@@ -166,3 +166,8 @@ const limpiarInputs = () => {
     document.getElementById(campo).value = "";
   });
 };
+
+//focus predeterminado
+window.onload = function () {
+  let focus = document.getElementById("inicio").focus();
+};
