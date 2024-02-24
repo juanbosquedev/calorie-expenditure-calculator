@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #ef6c28;
+  --secondary-color: #76c5a8;
+  --background-color: rgb(250, 250, 215);
+  --text-color: #63625f;
+}
+
+/* Scrollbar */
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -9,21 +17,20 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: rgb(122, 0, 0);
+  background-color: var(--primary-color);
 }
 
-/* header */
+/* Header */
 .header a {
   font-size: 1.5em;
 }
-
 
 .navbar-nav .nav-link {
   font-family: "Raleway", sans-serif;
 }
 
-.toggle-icon{
-  color:#ef6c28 !important;
+.toggle-icon {
+  color: var(--primary-color) !important;
 }
 
 .card legend {
@@ -34,36 +41,35 @@ body::-webkit-scrollbar-thumb {
   font-family: "Montserrat", sans-serif;
 }
 
-
 .containerNavbar {
-  background-color: #76c5a8;
+  background-color: var(--secondary-color);
 }
- .nav-link {
-  color: white !important;   font-size: 1.3rem;      
+
+.nav-link {
+  color: white !important;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .navbar-nav .nav-link:focus {
-  color: #ef6c28 !important;
+  color: var(--primary-color) !important;
   outline: none;
 }
 
-
-
-/* main */
+/* Main */
 .row {
   gap: 10px;
   overflow: hidden;
 }
 
 main {
-  background-color: rgb(250, 250, 215);
+  background-color: var(--background-color);
   height: 80vh;
 }
 
 .main-content .card {
-  color: #63625f;
-  background-color: rgb(250, 250, 215);
+  color: var(--text-color);
+  background-color: var(--background-color);
   border-radius: 25px;
 }
 
@@ -73,8 +79,9 @@ main {
 
 #resultado {
   display: none;
-  height: 70vh;
+  height: 70vh ;
   position: absolute;
+  top:0;
 }
 
 .cardTitle {
@@ -85,35 +92,36 @@ main {
 }
 
 .bold {
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .ButtomCalculate {
   border-radius: 20px;
   color: white;
-  background-color: #ef6c28;
+  background-color: var(--primary-color);
   transform: scale(1);
   transition: transform 1s ease-out;
 }
 
 .ButtomCalculate:hover {
   color: white;
-  background-color: #ef6c28;
+  background-color: var(--primary-color);
   transform: scale(1.1);
 }
 
 .bordered {
   height: 70vh;
-  border-left: 0.2px solid #ef6c28;
-  border-right: 0.2px solid #ef6c28;
+  border-left: 0.2px solid var(--primary-color);
+  border-right: 0.2px solid var(--primary-color);
 }
 
 .rounded-input {
   border-radius: 20px;
 }
-/* footer */
+
+/* Footer */
 .footer {
-  background-color: #76c5a8;
+  background-color: var(--secondary-color);
   color: white;
   margin: 0;
 }
@@ -132,14 +140,21 @@ main {
   header {
     max-height: 13%;
   }
+  main {
+    max-width: 100vw;
+  }
   footer {
     max-height: 13%;
   }
   p .truncate-text {
     display: none;
   }
-
+  #resultado {
+    height: 65vh;
+    padding: 0 1rem;
+  }
 }
+
 @media (max-width: 580px) {
   p .truncate-text {
     display: none;
@@ -147,8 +162,8 @@ main {
 }
 
 @media (max-width: 1645px) {
-  main{
-    overflow-y: scroll;
+  .row {
+    overflow: scroll;
   }
   .truncate-text {
     overflow: hidden;

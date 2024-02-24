@@ -1,6 +1,6 @@
 const resultado = document.getElementById("resultado");
 
-function procesarDatosCalorias() {
+const procesarDatosCalorias = () => {
   let nombre = document.getElementById("nombre").value;
   let apellido = document.getElementById("apellido").value;
   let idType = document.getElementById("idType").value;
@@ -26,6 +26,9 @@ function procesarDatosCalorias() {
   );
 
   if (validInputs) {
+    if (window.innerWidth < 1200) {
+      desplazamiento();
+    }
     mostrarMensajeDeError("Faltan campos por llenar");
     return;
   } else {
@@ -41,9 +44,19 @@ function procesarDatosCalorias() {
       idNumber
     );
   }
-}
+  //responsive small divice
+  if (window.innerWidth < 1200) {
+    desplazamiento();
+  }
+};
 
-function calcularCalorias(
+const desplazamiento = () => {
+  setTimeout(() => {
+    document.getElementById("resultado").scrollIntoView({ behavior: "smooth" });
+  }, 1000);
+};
+
+const calcularCalorias = (
   edad,
   peso,
   altura,
@@ -53,7 +66,7 @@ function calcularCalorias(
   apellido,
   idType,
   idNumber
-) {
+) => {
   const multiplicadorTMB = {
     peso: 10,
     altura: 6.25,
@@ -74,10 +87,13 @@ function calcularCalorias(
 
   let resultado = Math.floor(calculoCalorias);
   aparecerResultado(nombre, apellido, idType, idNumber, resultado);
-}
+};
 
-function mostrarMensajeDeError(msg) {
+const mostrarMensajeDeError = (msg) => {
+  resultado.innerHTML = "";
+
   resultado.style.display = "block";
+
   const divError = document.createElement("div");
   divError.className = "d-flex justify-content-center align-items-center h-100";
   divError.innerHTML = `<span class="alert alert-danger text-center h3 vh-19" style="color:#ef6c28">${msg}</span>`;
@@ -87,11 +103,10 @@ function mostrarMensajeDeError(msg) {
   setTimeout(() => {
     divError.remove();
     desvanecerResultado();
-  }, 3000);
-}
+  }, 4500);
+};
 
-// Animaciones
-function aparecerResultado(nombre, apellido, idType, idNumber, result) {
+const aparecerResultado = (nombre, apellido, idType, idNumber, result) => {
   resultado.style.display = "block";
   resultado.innerHTML = `
   <article class="d-flex justify-content-center align-items-center vh-100">
@@ -132,13 +147,13 @@ function aparecerResultado(nombre, apellido, idType, idNumber, result) {
     setTimeout(() => {
       limpiarInputs();
     }, 200);
-  }, 7000);
+  }, 8000);
   setTimeout(() => {
     calculo.remove();
-  }, 7000);
-}
+  }, 8000);
+};
 
-function desvanecerResultado(calculo) {
+const desvanecerResultado = () => {
   let distancia = 1;
   let id = setInterval(() => {
     distancia *= 2;
@@ -149,7 +164,7 @@ function desvanecerResultado(calculo) {
       resultado.style.top = 0;
     }
   }, 100);
-}
+};
 
 const limpiarInputs = () => {
   const campos = [
@@ -168,6 +183,6 @@ const limpiarInputs = () => {
 };
 
 //focus predeterminado
-window.onload = function () {
+window.onload = () => {
   let focus = document.getElementById("inicio").focus();
 };
