@@ -16,41 +16,40 @@ body::-webkit-scrollbar-thumb {
 .header a {
   font-size: 1.5em;
 }
-.header a.active {
-  text-decoration: underline;
-  color: #ef6c28 !important;
-}
 
-/* Tipografía para el navbar */
 
 .navbar-nav .nav-link {
   font-family: "Raleway", sans-serif;
 }
 
-/* Tipografía para el título de la Card */
+.toggle-icon{
+  color:#ef6c28 !important;
+}
+
 .card legend {
   font-family: "Raleway", sans-serif;
 }
 
-/* Tipografía para el resto de la Card */
 .card-body {
   font-family: "Montserrat", sans-serif;
 }
 
-/* Code Nathalia */
 
 .containerNavbar {
   background-color: #76c5a8;
 }
-.navbarStyles .nav-link {
-  color: white; /* Cambia el color del texto a blanco */
-  font-size: 1.3rem; /* Ajusta el tamaño de la fuente según sea necesario */
+ .nav-link {
+  color: white !important;   font-size: 1.3rem;      
   font-weight: bold;
 }
 
-.navbarStyles .nav-link.active {
-  color: white; /* Cambia el color del texto activo a blanco */
+.navbar-nav .nav-link:focus {
+  color: #ef6c28 !important;
+  outline: none;
 }
+
+
+
 /* main */
 .row {
   gap: 10px;
@@ -82,11 +81,11 @@ main {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #362517;
-  font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  font-size: 1.5rem;
 }
 
 .bold {
-  font-weight: bold; /* Aplica negrita solo a la palabra "Calorías" */
+  font-weight: bold; 
 }
 
 .ButtomCalculate {
