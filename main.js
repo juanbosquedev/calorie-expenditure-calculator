@@ -109,7 +109,7 @@ function mostrarMensajeDeError(msg) {
 function aparecerResultado(nombre, apellido, idType, idNumber, result) {
   resultado.style.display = "block";
   resultado.innerHTML = `
-  <article class="d-flex justify-content-center align-items-center vh-100 px-sm-2">
+  <article class="d-flex justify-content-center align-items-center vh-100">
       <div class="card-body text-center">
           <p class="card-title fs-1 h2 mb-3">
             Se recomienda al paciente 
@@ -153,7 +153,7 @@ function aparecerResultado(nombre, apellido, idType, idNumber, result) {
   }, 8000);
 }
 
-function desvanecerResultado() {
+function desvanecerResultado(calculo) {
   let distancia = 1;
   let id = setInterval(() => {
     distancia *= 2;
@@ -164,7 +164,7 @@ function desvanecerResultado() {
       resultado.style.top = 0;
     }
   }, 100);
-} //encapsular hacer función flecha
+}
 
 const limpiarInputs = () => {
   const campos = [
@@ -184,5 +184,5 @@ const limpiarInputs = () => {
 
 //focus predeterminado
 window.onload = function () {
-document.getElementById("inicio").focus();
+  let focus = document.getElementById("inicio").focus();
 };
