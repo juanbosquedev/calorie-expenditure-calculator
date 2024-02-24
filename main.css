@@ -76,6 +76,7 @@ main {
   display: none;
   height: 70vh;
   position: absolute;
+}
 
 .cardTitle {
   padding-top: 10px;
@@ -128,26 +129,6 @@ main {
   color: rgb(223, 223, 223);
 }
 
-.footer-column-right {
-    text-align: right;
-}
-
-.social-media-list {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-icon-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-}
-
-
 @media (max-width: 770px) {
   header {
     max-height: 13%;
@@ -177,5 +158,4 @@ main {
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
   }
-}
 }
