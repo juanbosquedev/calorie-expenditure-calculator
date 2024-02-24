@@ -93,9 +93,6 @@ const mostrarMensajeDeError = (msg) => {
   resultado.innerHTML = "";
 
   resultado.style.display = "block";
- 
-
-
 
   const divError = document.createElement("div");
   divError.className = "d-flex justify-content-center align-items-center h-100";
