@@ -29,11 +29,31 @@ function procesarDatosCalorias() {
     mostrarMensajeDeError("Faltan campos por llenar");
     return;
   } else {
-    calcularCalorias(edadAños, pesoKg, alturaCm, actividad, sexo);
+    calcularCalorias(
+      edadAños,
+      pesoKg,
+      alturaCm,
+      actividad,
+      sexo,
+      nombre,
+      apellido,
+      idType,
+      idNumber
+    );
   }
 }
 
-function calcularCalorias(edad, peso, altura, actividad, sexo) {
+function calcularCalorias(
+  edad,
+  peso,
+  altura,
+  actividad,
+  sexo,
+  nombre,
+  apellido,
+  idType,
+  idNumber
+) {
   const multiplicadorTMB = {
     peso: 10,
     altura: 6.25,
@@ -52,15 +72,15 @@ function calcularCalorias(edad, peso, altura, actividad, sexo) {
           multiplicadorTMB.edad * edad -
           161);
 
-  let result = Math.floor(calculoCalorias);
-  aparecerResultado(result);
+  let resultado = Math.floor(calculoCalorias);
+  aparecerResultado(nombre, apellido, idType, idNumber, resultado);
 }
 
 function mostrarMensajeDeError(msg) {
-  resultado.style.display = "flex";
+  resultado.style.display = "block";
   const divError = document.createElement("div");
   divError.className = "d-flex justify-content-center align-items-center h-100";
-  divError.innerHTML = `<span class="alert alert-danger text-center">${msg}</span>`;
+  divError.innerHTML = `<span class="alert alert-danger text-center h3 vh-19" style="color:#ef6c28">${msg}</span>`;
 
   resultado.appendChild(divError);
 
@@ -71,18 +91,31 @@ function mostrarMensajeDeError(msg) {
 }
 
 // Animaciones
-function aparecerResultado(result) {
-  resultado.style.display = "flex";
-  resultado.innerHTML = `
-        <div class="card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo">
-            <h5 class="card-title h2 mb-3">Calorías requeridas</h5>
-            <div class="mb-3 w-100">
-                <input class="form-control text-center" value="${result} kcal" style="font-size: 2rem" disabled>
-            </div>
-        </div>
-    `;
-  resultado.style.top = "100vh";
+function aparecerResultado(nombre, apellido, idType, idNumber, result) {
   resultado.style.display = "block";
+  resultado.innerHTML = `
+  <article class="d-flex justify-content-center align-items-center vh-100">
+      <div class="card-body text-center">
+          <p class="card-title fs-1 h2 mb-3">
+            Se recomienda al paciente 
+          <div class="mb-3">
+            <input class="form-control text-center fs-2"  value="${nombre} ${apellido}" disabled>
+          </div>
+          <div class="mb-3">
+             <input class="form-control text-center fs-2" value="${idType} n° ${idNumber}" disabled>
+          </div>
+         <div class="card-title fs-1 h2 mb-3">   el consumo total diario de</div>
+            <div class="mb-3">
+            <input class="form-control text-center fs-2" value="${result} kcal" disabled>
+            </div>
+            </p>
+      </div>
+  </article>
+  `;
+
+  resultado.style.display = "flex";
+
+  resultado.style.top = "100vh";
 
   let distancia = 100;
   let resta = 0.3;
@@ -92,7 +125,7 @@ function aparecerResultado(result) {
     if (resta > 100) {
       clearInterval(id);
     }
-  }, 30);
+  }, 5);
   let calculo = document.getElementById("calculo");
   setTimeout(() => {
     desvanecerResultado();
@@ -119,7 +152,16 @@ function desvanecerResultado(calculo) {
 }
 
 const limpiarInputs = () => {
-  const campos = ["nombre", "apellido", "idType", "idNumber","edad", "peso", "altura", "actividad"];
+  const campos = [
+    "nombre",
+    "apellido",
+    "idType",
+    "idNumber",
+    "edad",
+    "peso",
+    "altura",
+    "actividad",
+  ];
   campos.forEach((campo) => {
     document.getElementById(campo).value = "";
   });

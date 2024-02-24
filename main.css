@@ -1,24 +1,25 @@
-/* Estilos de la barra de desplazamiento */
+
 body::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #42320b;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #42320b;
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: rgb(122, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(122, 0, 0);
 }
 
 /* Estilos del encabezado */
 .header a {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .header a.active {
+
     text-decoration: underline;
     color: #EF6C28 !important;
 }
@@ -51,43 +52,50 @@ body::-webkit-scrollbar-thumb {
 /* Estilos de la tarjeta */
 .card {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  text-decoration: underline;
+  color: #ef6c28 !important;
+}
+
+/* Tipografía para el navbar */
+
 }
 
 .card legend {
+
     font-family: 'Raleway', sans-serif;
+
 }
 
 .card-body {
+
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Estilos del contenido principal */
 .row {
-    gap: 10px;
-    overflow: hidden;
+  gap: 10px;
+  overflow: hidden;
 }
 
-.main-content {
-    background-image: url('https://res.cloudinary.com/dhhyc88td/image/upload/v1708521396/Dietista_zgecas.jpg');
-    background-repeat: no-repeat;
-    background-color: #F9F9D7;
-    background-position: right;
-    background-size: contain;
+
+main {
+  background-color: rgb(250, 250, 215);
+  height: 80vh;
 }
 
 .main-content .card {
-    color: #63625f;
-    background-color: #FFFFFF;
-    border-radius: 25px;
+  color: #63625f;
+  background-color: rgb(250, 250, 215);
+  border-radius: 25px;
+
 }
 
-#resultado {
-    display: none;
+.back-drop {
+  backdrop-filter: blur(10px);
 }
 
-/* Estilos del navbar */
 .containerNavbar {
-    background-color: #76C5A8;
+  background-color: #76c5a8;
 }
 
 .navbarStyles .nav-link {
@@ -105,16 +113,53 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 10px;
     color: #362517;
     font-size: 1.5rem;
+
+  color: white; /* Cambia el color del texto a blanco */
+  font-size: 1.3rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  font-weight: bold;
+}
+
+
+
+/*MAIN*/
+#resultado{
+    display: none;
+    height: 70vh;
+    position: absolute;
+}
+
+.cardTitle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #362517;
+  font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+
 }
 
 .bold {
+
     font-weight: bold;
+
 }
 
 .ButtomCalculate {
-    border-radius: 20px;
-    color: white;
-    background-color: #EF6C28;
+  border-radius: 20px;
+  color: white;
+  background-color: #ef6c28;
+  transform: scale(1);
+  transition: transform 1s ease-out;
+}
+
+.ButtomCalculate:hover {
+  color: white;
+  background-color: #ef6c28;
+  transform: scale(1.1);
+}
+
+.bordered {
+  height: 70vh;
+  border-left: 0.2px solid #ef6c28;
+  border-right: 0.2px solid #ef6c28;
 }
 
 .input-text::placeholder {
@@ -126,11 +171,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .rounded-input {
-    border-radius: 20px;
+
+  border-radius: 20px;
+
 }
 
 /* Estilos del footer */
 .footer {
+
     background-color: #76C5A8;
     font-family: 'Raleway', sans-serif;
     color: white;
@@ -181,3 +229,4 @@ body::-webkit-scrollbar-thumb {
       margin-left: auto;
     }
   }
+
