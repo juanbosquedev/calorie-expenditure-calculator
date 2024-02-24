@@ -26,6 +26,9 @@ function procesarDatosCalorias() {
   );
 
   if (validInputs) {
+    if (window.innerWidth < 1200) {
+      desplazamiento();
+    }
     mostrarMensajeDeError("Faltan campos por llenar");
     return;
   } else {
@@ -40,7 +43,17 @@ function procesarDatosCalorias() {
       idType,
       idNumber
     );
+
   }
+  if (window.innerWidth < 1200) {
+    desplazamiento();
+  }
+}
+
+let desplazamiento =()=>{
+  setTimeout(() => {
+    document.getElementById("resultado").scrollIntoView({ behavior: "smooth" });
+  }, 1000); 
 }
 
 function calcularCalorias(
@@ -87,8 +100,10 @@ function mostrarMensajeDeError(msg) {
   setTimeout(() => {
     divError.remove();
     desvanecerResultado();
-  }, 3000);
+  }, 4500);
 }
+
+
 
 // Animaciones
 function aparecerResultado(nombre, apellido, idType, idNumber, result) {
@@ -132,10 +147,10 @@ function aparecerResultado(nombre, apellido, idType, idNumber, result) {
     setTimeout(() => {
       limpiarInputs();
     }, 200);
-  }, 7000);
+  }, 8000);
   setTimeout(() => {
     calculo.remove();
-  }, 7000);
+  }, 8000);
 }
 
 function desvanecerResultado(calculo) {

@@ -17,13 +17,12 @@ body::-webkit-scrollbar-thumb {
   font-size: 1.5em;
 }
 
-
 .navbar-nav .nav-link {
   font-family: "Raleway", sans-serif;
 }
 
-.toggle-icon{
-  color:#ef6c28 !important;
+.toggle-icon {
+  color: #ef6c28 !important;
 }
 
 .card legend {
@@ -34,12 +33,12 @@ body::-webkit-scrollbar-thumb {
   font-family: "Montserrat", sans-serif;
 }
 
-
 .containerNavbar {
   background-color: #76c5a8;
 }
- .nav-link {
-  color: white !important;   font-size: 1.3rem;      
+.nav-link {
+  color: white !important;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -47,8 +46,6 @@ body::-webkit-scrollbar-thumb {
   color: #ef6c28 !important;
   outline: none;
 }
-
-
 
 /* main */
 .row {
@@ -85,7 +82,7 @@ main {
 }
 
 .bold {
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .ButtomCalculate {
@@ -138,7 +135,6 @@ main {
   p .truncate-text {
     display: none;
   }
-
 }
 @media (max-width: 580px) {
   p .truncate-text {
@@ -147,8 +143,8 @@ main {
 }
 
 @media (max-width: 1645px) {
-  main{
-    overflow-y: scroll;
+  .row {
+    overflow: scroll;
   }
   .truncate-text {
     overflow: hidden;
